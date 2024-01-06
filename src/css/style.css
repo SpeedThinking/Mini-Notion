@@ -1,0 +1,164 @@
+/*
+font-family: 'Jua', sans-serif;
+font-family: 'Preahvihear', sans-serif;
+font-family: 'Tilt Warp', sans-serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans Mono', monospace;
+font-family: 'Noto Sans', sans-serif ;
+*/
+
+/* MENU */
+
+#menu-full-size {
+    display: visible;
+    background-color:hsl(60, 11%, 96%) ;
+    position: fixed;
+    width:12.44%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding:0;
+    margin:0;
+    border-right: 1px solid hsl(60, 11%, 96%);
+    font-size: 0.93em;
+}
+
+.menu-side-section:not(#menu-side-user #menu-side-options) {
+    position: fixed;
+    width:11.22%; 
+    left: 0;
+}
+
+/* SECTION USER */
+#menu-side-user {
+    display: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:1.28%;
+    border-radius:4px;
+    left: 0;
+    padding: 14px 0px 11px 20px;
+    margin-top:0.2%;
+    margin-left:0.2%;
+    font-size: 0.93em;
+}
+
+
+
+/* SECTION OPTIONS */
+#menu-side-options {
+    position: fixed;
+    width:9.22%;
+    top: 5%;
+    left: 0;
+    padding-bottom:1%;
+    padding-top:0.1%;
+    padding-left:1%;
+    margin-top:0.1%;
+    margin-bottom:20%;
+    border-radius:5px;
+    font-size: 0.93em;
+    
+}
+
+.options-side-full {
+    position: fixed;
+    cursor:pointer;
+    width:10.68%;
+    border-radius:4px;
+    left: 0;
+    padding: 5px 5px 5px 15px;
+    margin-left:0.2%;
+    width:10.68%;
+
+}
+menu > ol > section  :hover {
+    background-color:hsl(60, 4%, 91%);
+}
+
+
+#settings-button {
+    top:5%;
+    width:11.90%;
+}
+#updates {
+    top:8%;
+    width:11.90%;
+    
+}
+#search {
+    top:11%;
+    width:11.90%;
+
+}
+#new-page {
+    top:14%;
+    width:11.90%;
+
+}
+
+/* SECTION PRIVATE AND FAVORITES */
+#menu-side-private  {
+    top:17%;
+    width:9.22%;
+    margin-top:0.5%;
+    
+}
+
+#menu-side-favorites {
+    top:20%;
+    width:9.22%;
+    margin-top:0.5%;
+}
+.minimal-case {
+    position: relative;
+    border-radius:6px;
+    padding: 2px 2px 2px 5px;
+    cursor:pointer;
+    font-size: 0.9em !important;
+}
+
+
+/* SECTION TRASH */
+#menu-side-trash {
+    top:23%;
+    width:9.22%;
+    margin:0;
+}
+
+#trash {
+    position: fixed;
+    top:26%;
+    width:15.22%;
+    left: 0;
+    cursor:pointer;
+    width:10.68%;
+    border-radius:4px;
+    left: 0;
+    padding: 5px 5px 5px 20px;
+    margin-left:0.2%;
+}
+
+.emoji-button {
+position: fixed;
+background-color: transparent;
+border: none;
+padding: 0;
+left:0.9%;
+border-radius:5px;
+
+}
+.emoji-button:hover {
+    background-color:hsl(60, 4%, 91%);
+    cursor:pointer;
+}
+
+#user-name:hover {
+    background-color:transparent;
+    cursor:initial;
+}
+#user-name {
+    position: fixed;
+    left:2.3%;    
+}

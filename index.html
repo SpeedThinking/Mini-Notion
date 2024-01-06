@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/settingsMenu.css">
+    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/nav.css">
+    <link rel="shortcut icon" href="./assets/svg/Notion-logo.svg" type="image/svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+Mono:wght@200;300;400&family=Noto+Serif:ital,wght@0,300;0,400;1,300;1,400&family=Preahvihear&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Notion</title>
+</head>
+<body id="body">
+<nav class="nav-top" id="nav-top" aria-label="Top Navigation">
+  <!-- tab animation -->
+  <i class="fa-solid fa-bars"></i><i class="fa-solid fa-angles-right"></i><i class="fa-solid fa-angles-left"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
+<article id="nav-top-right"> 
+  <i class="fa-regular fa-message"></i>
+  <i class="fa-regular fa-clock"></i>
+    <i class="fa-regular fa-star" id="star"></i>
+    <i class="fa-solid fa-ellipsis" id="ellipsis"></i>
+
+</article>
+</nav>
+<article id="main-page">
+  <article id="landscape">
+   <i id="reposition">reposition</i>
+    <label for="file" id="change-wallpaper">
+        <img id="wallpaper" src="https://images.alphacoders.com/132/1326370.png" alt="wallpaper" class="wallpaper">
+        <span id="edit-wallpaper">&#9998; change</span>
+    </label>
+    <input type="file" accept="image/*" name="image" id="image" onchange="loadFileWallpaper(event)">
+    <script type="text/javascript">
+        let loadFileWallpaper = function(event) {
+            let image = document.getElementById('wallpaper');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+<article id="landscape-icon">
+  <label for="file" id="icon-landscape">
+    <img id="icon" src="./assets/pine-tree.png" alt="icon" class="icon">
+      <span id="change-icon">&#9998;</span>
+  </label>
+  <input type="file" accept="image/*" name="icon" id="modifiable-icon" onchange="loadFileIcon(event)">
+  <script type="text/javascript">
+      let loadFileIcon = function(event) {
+          let image = document.getElementById('icon');
+          image.src = URL.createObjectURL(event.target.files[0]);
+      };
+  </script>
+</article>
+</article>
+
+
+<article id="page-document">
+<textarea id="title" maxlength="80">title</textarea>
+<textarea id="description" maxlength="2101">description</textarea>
+</article>  
+</article>
+
+
+
+
+
+
+<menu class="menu-side" id="menu-full-size">
+
+<div class="user">
+<section class="menu-side-section" id="menu-side-user">
+  <button class="emoji-trigger" id="emoji-trigger"> 
+<div id="emoji-panel">  
+  <p class="emoji-text" id="emoji-text" maxlength="1">😊</p>
+</div>
+  </button>
+  &nbsp;
+    <span id="user-name" static> Pablo Andres Ne...</span> &nbsp; 
+
+</section> 
+</div>
+
+<!--Settings, updates, search and new page -->
+<!-- the div's on my section options are temporary-->
+<section class="menu-side-section" id="menu-side-options">
+
+    <div class="options-side-full" id="settings-button"> 
+    <i class="fa-solid fa-gear"></i>  &nbsp;  <span class="settings-text">Settings  &amp; Members</span>
+    </div>
+
+    <div class="options-side-full" id="updates">  
+    <i class="fa-regular fa-clock"></i>  &nbsp;  <span>Updates</span>
+    </div>
+
+    <div class="options-side-full" id="search">
+    <i class="fa-solid fa-magnifying-glass"></i>  &nbsp;  <span>Search</span>
+    </div>
+
+    <div class="options-side-full" id="new-page">
+    <i class="fa-solid fa-plus"></i>   &nbsp;  <span>New Page</span>
+    </div>
+
+</section>
+
+<section class="menu-side-section" id="menu-side-favorites">
+ &nbsp;  <span class="minimal-case">Favorites</span>
+<div id="favorite-pages"></div>
+</section>
+
+<section class="menu-side-section" id="menu-side-private">
+ &nbsp;  <span class="minimal-case">Private</span>
+<div id="private-pages"></div>
+</section>
+
+
+</menu>
+
+
+
+<!--Temporary dialog make this with js-->
+<dialog id="settings-menu" select disabled>
+    <form method="dialog">
+      <menu class="menu-side" id="menu-side-settings">
+        <!-- Account Section -->
+        <span class="minimal-case" id="account">Account</span>
+        <section class="menu-side-section" id="menu-side-account">
+          <div class="options-side" id="my-account">
+            <i class="fa-regular fa-user"></i> &nbsp; <span>My Account</span>
+          </div>
+          <div class="options-side" id="my-settings">
+            <i class="fa-solid fa-sliders"></i> &nbsp; <span>My Settings</span>
+          </div>
+          <div class="options-side" id="notifications-settings">
+            <i class="fa-regular fa-bell"></i> &nbsp; <span>My Notifications</span>
+          </div>
+          <div class="options-side" id="language">
+            <i class="fa-solid fa-users"></i>&nbsp; <span>Language &amp; Region</span>
+          </div>
+        </section>
+  
+        <!-- Workspace Section -->
+        <span class="minimal-case" id="workspace-title">Workspace</span>
+        <section class="menu-side-section" id="menu-side-workspace">
+          <div class="options-side" id="workspace">
+            <i class="fa-solid fa-gear"></i> &nbsp; <span>Settings</span>
+          </div>
+        </section>
+      </menu>
+  
+      <!-- My Account Content -->
+      <article id="my-account-content">
+        <h2 id="my-account-title">My Profile</h2>
+        <hr class="hr">
+
+        <div id="avatar-div">
+            <label for="file" id="change-photo">
+                <img id="avatar" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profile Picture" class="avatar-picture">
+                <span id="edit" >&#9998;</span>
+            </label>
+            <input type="file" accept="image/*" name="image" id="avatar-image" onchange="loadFile(event)">
+            <script type="text/javascript">
+                let loadFile = function(event) {
+                    let image = document.getElementById('avatar');
+                    image.src = URL.createObjectURL(event.target.files[0]);
+                };
+            </script>
+        </div>
+
+
+        <p id="preferred-name">Preferred name</p>
+        <textarea type="text" id="name" maxlength="18" spellcheck="false"></textarea>
+        <h2 id="account-security">Account Security</h2>
+        <hr class="hr" id="hr2">
+        <p id="email">Email</p>
+      <p id="email-text">quemiras@gmail.com</p>
+        <button id="change-email" disabled>Change Email</button>
+  
+        <p id="password-text">Password</p>
+        <p id="password">********</p>
+        <button id="change-password" disabled>Change Password</button>
+      </article>
+    </form>
+  </dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/1d9e07b931.js" crossorigin="anonymous"></script>
+<script src="./src/js/index.js"></script>
+
+</body>
+</html>

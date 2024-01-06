@@ -1,0 +1,336 @@
+/* SETTINGS PANEL */
+.menu-side {
+    user-select: none;
+    z-index: 2;
+    display: visible;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);-moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);-o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);transition: display 1.55s all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+#settings-menu {
+    user-select: none;
+    border:none !important;
+    outline:none !important;
+    position: absolute ;
+    user-select: none;
+    top: 75%;
+    left: 50%;
+    transform:translate(-50%, -50%) ;
+    z-index:2;
+    background-color: hsla(341, 100%, 100%, 0.98);
+    width:65%;
+    height:75%;
+    border-radius:10px;
+    color:#242424;
+    padding:20px;
+    -webkit-box-shadow: 0 0 6px 5px rgba(0,0,0,0.2) ;
+    box-shadow: 0 0 6px 5px rgba(0,0,0,0.2) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: border-color 0.35s all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    overflow:hidden;
+}
+
+#menu-side-settings {
+    background-color:transparent ;
+    position: fixed;
+    width:21.22%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    border-radius:5px;
+    border-right: 1px solid hsl(60, 11%, 98%);
+    font-size: 0.93em;
+}
+
+
+#menu-side-account {
+    position: fixed;
+    top:2%;
+    width:10.68%;
+    margin-left:0.2%;
+}
+
+.options-side {
+    position: fixed;
+    left:0;
+    border-radius:4px;
+    padding:4.8px 5px 5px 15.8px;
+    margin: 0.2%;
+    width:20.22%;
+    cursor:pointer;
+}
+
+
+#my-account {
+    top:5%;
+
+}
+#my-settings {
+    top:9%;
+}
+#notifications-settings {
+    top:13%;
+}
+#language {
+    top:17%;
+}
+
+#menu-side-workspace {
+    position: fixed;
+    top:25%;
+    cursor:pointer;
+    width:10.68%;
+    margin-left:0.2%;
+
+}
+
+#menu-side-account :hover {
+    background-color:hsl(60, 4%, 91%);
+}
+
+.menu-side-section> :hover {
+    background-color:hsl(60, 4%, 91%);
+}
+
+/*WORKSPACE */
+#workspace-title {
+    position: fixed;
+    top:22%;
+    left:0;
+    width:10.68%;
+    margin-left:0.2%;
+    cursor:text;
+    font-weight: bold;
+}
+
+#account {
+    position: fixed;
+    top:2%;
+    left:0;
+    width:18.68%;
+    margin-left:0.2%;
+    cursor:text;
+    font-weight: bold;
+}
+
+#avatar-div {
+    position: relative;
+    display: inline-block;
+}
+
+#avatar {
+    position: fixed;
+    top: 18%;
+    left: 25%;
+    max-width: 70px;
+    max-height: 70px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 0.2%;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#edit {
+    position: fixed;
+    top: 20%;
+    left: 26.8%;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #242424;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 50%;
+    display: none;
+}
+
+#avatar-image {
+    display: none;
+}
+
+#edit:hover, #edit-background:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#change-photo:hover #edit {
+    display: block;
+    
+}
+dialog > form > article > p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: 0.93em;
+    color:#242424;
+    position: fixed;
+    top:20%;
+    left:20%;
+}
+#preferred-name {
+    position: fixed;
+    top:15%;
+    left:32%;
+}
+#name {
+    padding-top: 5px;
+    overflow: hidden;
+    position: fixed;
+    top:20%;
+    left: 32%;
+    width: 25%;
+    height: 5%;
+    background-color:hsl(80, 100%, 99%);
+    font-weight: bold;
+    border: 1px solid hsl(100, 2%, 74%);
+    border-radius: 4px;
+    font-size: 0.93em;
+    color:#242424;
+    resize:none;
+    margin-left:0.2%;
+    text-align: center;
+    display:flex;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.2) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: border-color 0.35s all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+
+}
+.hr {
+    width: 65%;
+    position: fixed;
+    top:12%;
+    left:25.2%;
+}
+#account-security {
+    position: fixed;
+    top:30%;
+    left:26%;
+    width:180.68%;
+    margin-left:0.2%;
+    cursor:text;
+
+
+}
+#hr2{
+top : 36%;
+}
+#email {
+    position: fixed;
+    top:38%;
+    left:26%;
+    width:15.68%;
+    margin-left:0.2%;
+    cursor:text;
+}
+#email-text {
+    position: fixed;
+    top:42%;
+    left:26%;
+    width:15.68%;
+    margin-left:0.2%;
+    cursor:text;
+    font-weight:bold;
+    user-select:text;
+}
+#change-email {
+    position: fixed;
+    top:40%;
+    left:79%;
+    width:10.68%;
+    height: 5%;
+    margin-left:0.2%;
+    cursor:pointer;
+    background-color:transparent;
+    border: 1px solid hsl(60, 11%, 91%);
+    border-radius:5px;
+    color:#242424;
+}
+#password-text {
+    position: fixed;
+    top:48%;
+    left:26%;
+    width:15.68%;
+    margin-left:0.2%;
+    cursor:text;
+}
+#password {
+    position: fixed;
+    top:52%;
+    left:26%;
+    width:4.68%;
+    margin-left:0.2%;
+    cursor:text;
+    user-select:text;
+    color:#242424;
+    border: 1px solid hsl(60, 11%, 91%);
+    border-radius:5px;
+    text-align: center;
+    font-weight:bold;
+    height: 3%;
+    padding-top:2px;
+}
+#change-password {
+    position: fixed;
+    top:48%;
+    left:74%;
+    width:15.68%;
+    height: 5%;
+    margin-left:0.2%;
+    cursor:pointer;
+    background-color:transparent;
+    border: 1px solid hsl(60, 11%, 91%);
+    border-radius:5px;
+    color:#242424;
+}
+
+#name:focus {
+    outline: none;
+}
+#appearance-text {
+    position:fixed;
+    top:60%;
+    left:26%;
+    width:15.68%;
+    margin-left:0.2%;
+    cursor:text;
+    user-select:text;
+}
+#appearance {
+    position: fixed;
+    top:60%;
+    left:79%;
+    width:10.68%;
+    margin-left:0.2%;
+    cursor:text;
+    color:#242424;
+    border: 1px solid hsl(60, 11%, 91%);
+}
+
+[data-bs-theme="dark"] {
+    background-color: black;
+    color: white;
+  }
+  /* Your light mode styles */
+  [data-bs-theme="light"] {
+    background-color: white;
+    color: black;
+  }
+  .dropdown {
+    position: fixed;
+    top: 50%;
+    left: 70%;
+  }
+#my-account-title {
+    position: fixed;
+    top: 7%;
+    left:25%;
+    width:100.68%;
+    margin-left:0.2%;
+    cursor:text;
+
+}
